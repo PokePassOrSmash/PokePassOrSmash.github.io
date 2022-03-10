@@ -12,6 +12,9 @@ inc = 1
 smash = []
 lastSmash = false
 function incUp(wasSmash){
+    if(inc == pokedexLength){
+        return;
+    }
     lastSmash = wasSmash
     if(wasSmash){
         smash.push(inc)
@@ -22,6 +25,9 @@ function incUp(wasSmash){
 }
 
 function incDown(){
+    if(inc == 0){
+        return;
+    }
     if(lastSmash){
         smash.pop()
     }
